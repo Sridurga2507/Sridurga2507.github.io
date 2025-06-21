@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
+      background: #ffffff;
+      color: #333;
+      transition: background 0.4s, color 0.4s;
+      background-image: linear-gradient(#ffffff,#d0ecff); /* Path to your image */
+      background-size: cover; /* Adjusts the image size */
+      background-repeat: no-repeat; /* Prevents tiling */
+      background-position: center; /* Centers the image */
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+    }
+
+    /* NAVIGATION BAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background:#d0ecff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo a {
+      color: #005b99;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      color: #0A192F;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links li a:hover,
+    .nav-links li a.active {
+      color: #ff9800;
+    }
+
+    /* CONTENT SECTIONS */
+    section {
+      padding: 4rem 2rem;
+      background: #f4faff;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 3rem auto;
+      box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+      display: none; /* Hide all by default */
+    }
+
+    section.active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h1, h2 {
+      color: #005b99;
+      margin-bottom: 1rem;
+      font: Montserrat;
+    }
+
+    ul {
+      list-style: disc inside;
+      margin-top: 0.5rem;
+    }
+
+    /* IMAGE */
+    #about img {
+      display: block;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+
+    #about img.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #d0ecff;
+      color: #005b99;
+      font-weight: 500;
+      margin-top: 2rem;
+    }
+    a:hover {
+  color: #ff9800;
+}
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="#home">Sridurga A</a></div>
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="active">
+    <h1>Welcome to My Portfolio!</h1>
+
+    <p>Blending Logic with Creativity</p>
+
+<p>Hi, I’m Sridurga A — a B.Tech CSE student with a vision for innovation.
+From algorithms to aesthetics, I bring a balanced approach to problem-solving, turning data into insights and analytics into action</p>
+    <br>
+<h2>"Passion Fuels Progress — Let’s Build Together."</h2>
+   
+</section>
+
+  <section id="about">
+    <img src="Sri.jpeg" alt="Your Photo" />
+    <h2>About Me</h2>
+    <p>I am a passionate student specializing in Data Science, driven by a keen interest in applying technology and thinking out of the box to solve real-world challenges using growing technologies. 
+        I enjoy expanding my skill set through learning new programming languages and frameworks, and I take pride in developing innovative projects that combine creativity with technical expertise. 
+        With a solid foundation in software development, data analytics, and web technologies, I am eager to contribute to impactful solutions.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Programming Skills</h2>
+    <ul>
+      <li><strong>Languages:</strong> Java, Python(Basic), R programming</li>
+      <li><strong>Web Development:</strong> HTML, CSS, Javascript</li>
+      <li><strong>Database:</strong> MySQL</li>
+      <li><strong>Tools:</strong> Git,Github</li>
+    </ul>
+    <br>
+    <h2>Soft Skills</h2>
+    <ul>
+      <li>Communication Skills</li>
+      <li>Team work and Collaboration</li>
+      <li>Problem Solving</li>
+      <li><strong>Languages Known:</strong>Tamil,English</li>
+    </ul>
+    <br>
+    <h2>"Building Skills, Breaking Boundaries."</h2>
+  </section>
+
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Data Fundamentals - IBM Skillbuild</li>
+      <li>Git and Github for developers - Infosys Springboard</li>
+      <li>Web development internship - Codebind technologies</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <ul>
+      <li>E-Commerce Website - HTML, CSS , PHP and MySQL</li>
+      <li>Personal Portfolio - HTML,CSS</li>
+      <li>Breast Cancer Classification - KNN,Naiive Bayes,LogisticRegression</li>
+    </ul>
+  </section>
+<section id="contact">
+  <h2>Contact Me</h2>
+  <p>Thank you for visiting my portfolio! feel free to reach out.</p>
+
+  <div style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 2;">
+    <p>
+      <i class="fas fa-envelope" style="color: #0097e6;"></i>
+      <strong> Email:</strong>
+      <a href="mailto:sridurgavit@gmail.com">sridurgavit@gmail.com</a>
+    </p>
+
+    <p>
+      <i class="fab fa-linkedin" style="color: #0077b5;"></i>
+      <strong> LinkedIn:</strong>
+      <a href="https://www.linkedin.com/in/sridurga-angusamy-a7b3bb251" target="_blank">www.linkedin.com/in/sridurga-angusamy-a7b3bb251</a>
+    </p>
+
+    <p>
+      <strong> Mobile No:</strong>
+      <a href="8148182630" target="_blank">+91 8148182630</a>
+    </p>
+
+  </div>
+</section>
+
+  <footer>
+    <p>&copy; 2025 Sridurga A. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // JS for "single page" style navigation — show one section, hide others
+    const navLinks = document.querySelectorAll('.nav-link');
+    const sections = document.querySelectorAll('section');
+    const aboutImg = document.querySelector('#about img');
+
+    function hideAllSections() {
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      aboutImg.classList.remove('visible');
+    }
+
+    function showSection(id) {
+      hideAllSections();
+      const section = document.getElementById(id);
+      if (section) {
+        section.classList.add('active');
+        // Fade-in image only on About page
+        if (id === 'about' && aboutImg) {
+          setTimeout(() => {
+            aboutImg.classList.add('visible');
+          }, 100); // slight delay for smooth fade
+        }
+      }
+    }
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+
+        // Remove active class from all links
+        navLinks.forEach(l => l.classList.remove('active'));
+        // Add active class to clicked link
+        link.classList.add('active');
+
+        // Show related section
+        const targetId = link.getAttribute('href').substring(1);
+        showSection(targetId);
+
+        // Scroll to top smoothly
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+
+    // On page load, fade-in image if About is visible
+    window.addEventListener('load', () => {
+      if (document.getElementById('about').classList.contains('active') && aboutImg) {
+        aboutImg.classList.add('visible');
+      }
+    });
+    
+
+  </script>
+</body>
+</html>
